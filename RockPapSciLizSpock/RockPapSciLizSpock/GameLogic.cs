@@ -8,19 +8,9 @@ namespace RockPapSciLizSpock
 {
     class GameLogic
     {
-        public string playerOne;
-        public string playerTwo;
-        
-        // all possible player scenarios
-
-        public string humanPlayerOneName;
-        public string humanPlayerTwoName;
-
-        public string computerPlayerOne;
-        public string computerPlayerTwo;
 
         
-       
+        
 
 
 
@@ -40,49 +30,29 @@ namespace RockPapSciLizSpock
 
         }
 
-        public void PlayerOneSetup()
+        public void HowManyPlayers()
         {
-            Console.WriteLine("Is player one a human or computer? (human / computer)");
-            string responseOne = Console.ReadLine();
-            if (responseOne == "human")
+            Console.WriteLine("How many players will there be? enter 1 for one player, 2 for two players, and 0 to watch a computer match [fun!]");
+            string playerChoice = Console.ReadLine();
+            if (playerChoice == "1")
             {
-                Console.WriteLine("Please enter your name then.");
-                humanPlayerOneName = Console.ReadLine();
-                Console.WriteLine("Thanks, " + humanPlayerOneName);
-                playerOne = humanPlayerOneName;
+                playerOne = new HumanPlayer();
+                playerTwo = new ComputerPlayer();
             }
-            else if (responseOne == "computer")
+            else if (playerChoice == "2")
             {
-                Console.WriteLine("ok, player one is computer generated");
-                computerPlayerOne = "Computer One";
-                playerOne = computerPlayerOne;
+                playerOne = new HumanPlayer();
+                playerTwo = new HumanPlayer();
             }
-            else
+            else if (playerChoice == "0")
             {
-                Console.WriteLine("invalid entry.");
-                PlayerOneSetup();
-            }
-        }
-        public void PlayerTwoSetup() { 
-            Console.WriteLine("Is player two a human or computer? (human / computer)");
-            string responseTwo = Console.ReadLine();
-            if (responseTwo == "human")
-            {
-                Console.WriteLine("Please enter your name then.");
-                humanPlayerTwoName = Console.ReadLine();
-                Console.WriteLine("Thanks, " + humanPlayerTwoName);
-                playerTwo = humanPlayerTwoName;
-            }
-            else if (responseTwo == "computer")
-            {
-                Console.WriteLine("ok, player two is computer generated");
-                computerPlayerTwo = "Computer Two";
-                playerTwo = computerPlayerTwo;
+                playerOne = new ComputerPlayer();
+                playerTwo = new ComputerPlayer();
             }
             else
             {
-                Console.WriteLine("invalid entry. haha now you have to start over");
-                PlayerTwoSetup();
+                Console.WriteLine("Please enter one of the given options.");
+                HowManyPlayers();
             }
         }
 

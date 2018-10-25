@@ -9,8 +9,9 @@ namespace RockPapSciLizSpock
     abstract class PlayerModel
     {
 
-        
-       
+        public string playerOne;
+        public string playerTwo;
+
 
         public PlayerModel()
         {

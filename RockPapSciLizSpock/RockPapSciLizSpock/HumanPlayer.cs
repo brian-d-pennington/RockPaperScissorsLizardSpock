@@ -18,7 +18,7 @@ namespace RockPapSciLizSpock
 
         public override void PlayerMakesMove()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Human player: make your")
         }
     }
 }
