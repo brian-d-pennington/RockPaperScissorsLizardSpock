@@ -18,7 +18,7 @@ namespace RockPapSciLizSpock
 
         public override void PlayerMakesMove()
         {
-            Console.WriteLine("Human player: make your")
+            Console.WriteLine("Make your move: 'rock', 'paper', 'scissors', 'lizard', or 'spock'?");
         }
     }
 }

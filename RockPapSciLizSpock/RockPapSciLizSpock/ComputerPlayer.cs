@@ -9,7 +9,7 @@ namespace RockPapSciLizSpock
     
     class ComputerPlayer : PlayerModel
     {
-        string[] compGeneratedNames = new string[] { "Boris", "Gertrude", "Wally" , "Cece", "Martina" };
+     
 
         public ComputerPlayer()
         {

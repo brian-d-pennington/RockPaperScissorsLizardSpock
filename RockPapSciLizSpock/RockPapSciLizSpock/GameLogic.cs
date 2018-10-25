@@ -9,10 +9,6 @@ namespace RockPapSciLizSpock
     class GameLogic
     {
 
-        
-        
-
-
 
         public GameLogic()
         {
@@ -30,51 +26,31 @@ namespace RockPapSciLizSpock
 
         }
 
-        public void HowManyPlayers()
-        {
-            Console.WriteLine("How many players will there be? enter 1 for one player, 2 for two players, and 0 to watch a computer match [fun!]");
-            string playerChoice = Console.ReadLine();
-            if (playerChoice == "1")
-            {
-                playerOne = new HumanPlayer();
-                playerTwo = new ComputerPlayer();
-            }
-            else if (playerChoice == "2")
-            {
-                playerOne = new HumanPlayer();
-                playerTwo = new HumanPlayer();
-            }
-            else if (playerChoice == "0")
-            {
-                playerOne = new ComputerPlayer();
-                playerTwo = new ComputerPlayer();
-            }
-            else
-            {
-                Console.WriteLine("Please enter one of the given options.");
-                HowManyPlayers();
-            }
-        }
 
-        public void MatchOutcomes()
+        
+
+        public void MatchOutcomes(PlayerModel playerOne, PlayerModel playerTwo)
         {
             List<string> gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
 
-            if ((playerOne == gestures[0] && playerTwo == gestures[2] || playerTwo == gestures[3]) || 
-                (playerOne == gestures[2] && playerTwo == gestures[1] || playerTwo == gestures[3]) ||
-                (playerOne == gestures[1] && playerTwo == gestures[0] || playerTwo == gestures[4]) ||
-                (playerOne == gestures[3] && playerTwo == gestures[4] || playerTwo == gestures[1]) ||
-                (playerOne == gestures[4] && playerTwo == gestures[2] || playerTwo == gestures[0]))
+            if ((playerOne.makesMove == gestures[0] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3]) || 
+                (playerOne.makesMove == gestures[2] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]) ||
+                (playerOne.makesMove == gestures[1] && playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[4]) ||
+                (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1]) ||
+                (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[0]))
             {
                 Console.WriteLine(playerOne + " wins this game.");
+                playerOne.score++;
+
             }
-            else if ((playerOne == gestures[0] && playerTwo == gestures[4] || playerTwo == gestures[1]) ||
-                (playerOne == gestures[2] && playerTwo == gestures[4] || playerTwo == gestures[0]) ||
-                (playerOne == gestures[1] && playerTwo == gestures[2] || playerTwo == gestures[3])||
-                (playerOne == gestures[3] && playerTwo == gestures[0] || playerTwo == gestures[2]) ||
-                (playerOne == gestures[4] && playerTwo == gestures[1] || playerTwo == gestures[3]))
+            else if ((playerOne.makesMove == gestures[0] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1]) ||
+                (playerOne.makesMove == gestures[2] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[0]) ||
+                (playerOne.makesMove == gestures[1] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3])||
+                (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[2]) ||
+                (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]))
             {
                 Console.WriteLine(playerTwo + " wins this game.");
+                playerTwo.score++;
             }
             else
             {

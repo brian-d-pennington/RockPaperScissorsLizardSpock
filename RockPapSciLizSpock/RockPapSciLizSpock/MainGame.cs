@@ -10,19 +10,20 @@ namespace RockPapSciLizSpock
     {
         public PlayerModel playerOne;
         public PlayerModel playerTwo;
-        public GameLogic rules;
+        public GameLogic gameLogic;
       
 
         public MainGame()
         {
-            rules = new GameLogic();   
+            gameLogic = new GameLogic(); 
         }
 
 
         public void GameMenu()
         {
-            rules.DisplayRules();
-
+            gameLogic.DisplayRules();
+            HowManyPlayers();
+            gameLogic.MatchOutcomes(playerOne, playerTwo);
         }
 
         public void HowManyPlayers()
