@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace RockPapSciLizSpock
 {
-    public string compPlayerOneName;
-    public string compPlayerTwoName;
-    class ComputerPlayer : PlayerModel
+    class MainGame
     {
+
+
+        public void GameMenu()
+        {
+
+        }
     }
 }
