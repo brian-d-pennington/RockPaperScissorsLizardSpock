@@ -10,7 +10,7 @@ namespace RockPapSciLizSpock
     {
         static void Main(string[] args)
         {
-            GameMenu newGame = new GameMenu();
+            MainGame newGame = new MainGame();
 
             newGame.GameMenu();
 

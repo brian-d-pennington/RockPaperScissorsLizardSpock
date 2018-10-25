@@ -6,9 +6,25 @@ using System.Threading.Tasks;
 
 namespace RockPapSciLizSpock
 {
-    public string compPlayerOneName;
-    public string compPlayerTwoName;
+    
     class ComputerPlayer : PlayerModel
     {
-    }
+        string[] compGeneratedNames = new string[] { "Boris", "Gertrude", "Wally" , "Cece", "Martina" };
+
+        public ComputerPlayer()
+        {
+
+        }
+
+        public override void PlayerMakesMove()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void computerGeneratedPlayerName()
+        {
+            
+        }
+    }   
+
 }
