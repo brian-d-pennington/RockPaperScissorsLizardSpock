@@ -8,7 +8,7 @@ namespace RockPapSciLizSpock
 {
     class GameLogic
     {
-
+        List<string> gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
 
         public GameLogic()
         {
@@ -30,8 +30,7 @@ namespace RockPapSciLizSpock
         
 
         public void MatchOutcomes(PlayerModel playerOne, PlayerModel playerTwo)
-        {
-            List<string> gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
+        { 
 
             if ((playerOne.makesMove == gestures[0] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3]) || 
                 (playerOne.makesMove == gestures[2] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]) ||

@@ -18,7 +18,10 @@ namespace RockPapSciLizSpock
 
         public override void PlayerMakesMove()
         {
-            throw new NotImplementedException();
+            Random r = new Random();
+            // ... Get three random numbers.
+            //     Always 5, 6, 7, 8 or 9.
+            Console.WriteLine(r.Next(5, 10));
         }
 
         public void computerGeneratedPlayerName()

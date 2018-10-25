@@ -15,7 +15,8 @@ namespace RockPapSciLizSpock
 
         public MainGame()
         {
-            gameLogic = new GameLogic(); 
+            gameLogic = new GameLogic();
+      
         }
 
 
@@ -23,6 +24,8 @@ namespace RockPapSciLizSpock
         {
             gameLogic.DisplayRules();
             HowManyPlayers();
+            playerOne.PlayerMakesMove();
+            playerTwo.PlayerMakesMove()
             gameLogic.MatchOutcomes(playerOne, playerTwo);
         }
 
@@ -34,16 +37,19 @@ namespace RockPapSciLizSpock
             {
                 playerOne = new HumanPlayer();
                 playerTwo = new ComputerPlayer();
+                Console.WriteLine("Alright, you'll be playing the computer.");
             }
             else if (playerChoice == "2")
             {
                 playerOne = new HumanPlayer();
                 playerTwo = new HumanPlayer();
+                Console.WriteLine("You will be playing another human.");
             }
             else if (playerChoice == "0")
             {
                 playerOne = new ComputerPlayer();
                 playerTwo = new ComputerPlayer();
+                Console.WriteLine("You'll be watching a computerized match. Awesome use of your time.");
             }
             else
             {

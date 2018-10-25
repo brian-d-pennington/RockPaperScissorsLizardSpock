@@ -18,7 +18,7 @@ namespace RockPapSciLizSpock
          
         }
 
-        public abstract void PlayerMakesMove();
+        public abstract string PlayerMakesMove(GameLogic gestures);
         
     }
 }
