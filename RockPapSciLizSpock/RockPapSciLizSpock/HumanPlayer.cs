@@ -16,29 +16,29 @@ namespace RockPapSciLizSpock
 
        
 
-        public override string PlayerMakesMove()
+        public override void PlayerMakesMove()
         {
             Console.WriteLine("Make your move: 'rock', 'paper', 'scissors', 'lizard', or 'spock'?");
             string move = Console.ReadLine();
             if (move == "rock")
             {
-                return gestures[0];
+                makesMove = "rock";
             }
             else if (move == "paper")
             {
-                return 
+                makesMove = "paper";
             }
             else if (move == "scissors")
             {
-                return
+                makesMove = "scissors";
             }
             else if (move == "lizard")
             {
-                return
+                makesMove = "lizard";
             }
             else if (move == "spock")
             {
-                return
+                makesMove = "spock";
             }
             else
             {

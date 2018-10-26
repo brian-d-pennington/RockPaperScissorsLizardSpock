@@ -25,7 +25,7 @@ namespace RockPapSciLizSpock
             gameLogic.DisplayRules();
             HowManyPlayers();
             playerOne.PlayerMakesMove();
-            playerTwo.PlayerMakesMove()
+            playerTwo.PlayerMakesMove();
             gameLogic.MatchOutcomes(playerOne, playerTwo);
         }
 
