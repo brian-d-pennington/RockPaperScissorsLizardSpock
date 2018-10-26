@@ -13,8 +13,8 @@ namespace RockPapSciLizSpock
         public GameLogic gameLogic;
 
         public string playerChoice;
-        public string humanPlayerNameOne = "no name currently";
-        public string humanPlayerNameTwo = "also no name currently";
+        public string humanPlayerNameOne;
+        public string humanPlayerNameTwo;
 
 
         public MainGame()
@@ -36,10 +36,15 @@ namespace RockPapSciLizSpock
             {
                 TwoPlayersEnterNames();
             }
-            //future game loop
-            playerOne.PlayerMakesMove();
-            playerTwo.PlayerMakesMove();
-            gameLogic.MatchOutcomes(playerOne, playerTwo);
+            for (int i = 0; i < 5; i++)
+            {
+                playerOne.PlayerMakesMove();
+                playerTwo.PlayerMakesMove();
+                gameLogic.MatchOutcomes(playerOne, playerTwo);
+                DisplayScores();
+            }
+            DisplayWinner();
+            
         }
 
         public void HowManyPlayers()
@@ -85,6 +90,26 @@ namespace RockPapSciLizSpock
             humanPlayerNameTwo = Console.ReadLine();
             Console.WriteLine("Player One: " + humanPlayerNameOne + " vs Player Two: " + humanPlayerNameTwo + ", let the game begin!");
         }
-          
+        
+        public void DisplayScores()
+        {
+            Console.WriteLine("Player One: " + playerOne.score + ", Player Two:" + playerTwo.score);
+        }
+
+        public void DisplayWinner()
+        {
+            if (playerOne.score > playerTwo.score)
+            {
+                Console.WriteLine("Player One wins!");
+            }
+            else if (playerOne.score < playerTwo.score)
+            {
+                Console.WriteLine("Player Two wins!");
+            }
+            else
+            {
+                Console.WriteLine("Tie game. Boring!");
+            }
+        }
     }   
 }

@@ -18,6 +18,7 @@ namespace RockPapSciLizSpock
 
         public void DisplayRules()
         {
+            Console.WriteLine("----ROCK----PAPER----SCISSORS----LIZARD----SPOCK----");
             Console.WriteLine("Scissors cuts paper, paper covers rock, rock crushes lizard,");
             Console.WriteLine("lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard,");
             Console.WriteLine("lizard eats paper, paper disproves Spock, Spock vaporizes rock,");
