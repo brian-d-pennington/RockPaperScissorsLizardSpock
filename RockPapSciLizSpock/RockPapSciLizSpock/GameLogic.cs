@@ -24,6 +24,8 @@ namespace RockPapSciLizSpock
             Console.WriteLine("lizard eats paper, paper disproves Spock, Spock vaporizes rock,");
             Console.WriteLine("and as it always has, rock crushes scissors.... good luck.");
             Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine("FIVE ROUNDS TOTAL, PLAYER WITH THE HIGHEST SCORE WINS");
+            Console.WriteLine("----------------------------------------------------------");
 
         }
 
@@ -33,21 +35,21 @@ namespace RockPapSciLizSpock
         public void MatchOutcomes(PlayerModel playerOne, PlayerModel playerTwo)
         { 
 
-            if ((playerOne.makesMove == gestures[0] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3]) || 
-                (playerOne.makesMove == gestures[2] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]) ||
-                (playerOne.makesMove == gestures[1] && playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[4]) ||
-                (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1]) ||
-                (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[0]))
+            if ((playerOne.makesMove == gestures[0] && (playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3])) || 
+                (playerOne.makesMove == gestures[2] && (playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3])) ||
+                (playerOne.makesMove == gestures[1] && (playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[4])) ||
+                (playerOne.makesMove == gestures[3] && (playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1])) ||
+                (playerOne.makesMove == gestures[4] && (playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[0])))
             {
                 Console.WriteLine("Player One wins this game.");
                 playerOne.score++;
 
             }
-            else if ((playerOne.makesMove == gestures[0] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1]) ||
-                (playerOne.makesMove == gestures[2] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[0]) ||
-                (playerOne.makesMove == gestures[1] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3])||
-                (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[2]) ||
-                (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]))
+            else if ((playerOne.makesMove == gestures[0] && (playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1])) ||
+                (playerOne.makesMove == gestures[2] && (playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[0])) ||
+                (playerOne.makesMove == gestures[1] && (playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[3]))||
+                (playerOne.makesMove == gestures[3] && (playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[2])) ||
+                (playerOne.makesMove == gestures[4] && (playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3])))
             {
                 Console.WriteLine("Player Two wins this game.");
                 playerTwo.score++;

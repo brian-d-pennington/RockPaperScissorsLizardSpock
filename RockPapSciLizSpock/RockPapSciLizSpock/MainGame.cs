@@ -24,7 +24,7 @@ namespace RockPapSciLizSpock
         }
 
 
-        public void GameMenu()
+        public void GameMenu() //in the future, this GameMenu should be its own closs
         {
             gameLogic.DisplayRules();
             HowManyPlayers();
@@ -44,7 +44,8 @@ namespace RockPapSciLizSpock
                 DisplayScores();
             }
             DisplayWinner();
-            
+            PlayAgainOrNot();
+           
         }
 
         public void HowManyPlayers()
@@ -102,14 +103,30 @@ namespace RockPapSciLizSpock
             {
                 Console.WriteLine("Player One wins!");
             }
-            else if (playerOne.score < playerTwo.score)
+            else
             {
                 Console.WriteLine("Player Two wins!");
             }
+        }
+        public void PlayAgainOrNot()
+        {
+            Console.WriteLine("Would you like to play or witness another match? Y/N");
+            string yesNo = Console.ReadLine();
+            if (yesNo == "Y")
+            {
+                GameMenu();
+            }
+            else if (yesNo == "N")
+            {
+                Console.WriteLine("ok byeeee");
+            }
             else
             {
-                Console.WriteLine("Tie game. Boring!");
+                Console.WriteLine("type correctly for once in your life..");
+                PlayAgainOrNot();
             }
+         
         }
+
     }   
 }
