@@ -103,9 +103,13 @@ namespace RockPapSciLizSpock
             {
                 Console.WriteLine("Player One wins!");
             }
-            else
+            else if (playerTwo.score > playerOne.score)
             {
                 Console.WriteLine("Player Two wins!");
+            }
+            else
+            {
+                Console.WriteLine("Tie game!");
             }
         }
         public void PlayAgainOrNot()

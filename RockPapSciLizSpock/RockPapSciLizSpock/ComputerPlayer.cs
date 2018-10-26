@@ -19,7 +19,7 @@ namespace RockPapSciLizSpock
         public override void PlayerMakesMove()
         {
             Console.WriteLine("Computer chooses rock, paper, scissors, lizard, or spock..");
-            System.Threading.Thread.Sleep(2000); // to give it a more human-like response
+            System.Threading.Thread.Sleep(1000); // to give it a more human-like response
 
             Random r = new Random();
             int x = r.Next(5, 10);
