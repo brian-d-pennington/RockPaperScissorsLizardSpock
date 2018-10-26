@@ -8,13 +8,13 @@ namespace RockPapSciLizSpock
 {
     class HumanPlayer : PlayerModel
     {
-       
+        
         public HumanPlayer()
         {
             
         }
 
-       
+        
 
         public override void PlayerMakesMove()
         {

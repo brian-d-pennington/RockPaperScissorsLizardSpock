@@ -38,7 +38,7 @@ namespace RockPapSciLizSpock
                 (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[4] || playerTwo.makesMove == gestures[1]) ||
                 (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[2] || playerTwo.makesMove == gestures[0]))
             {
-                Console.WriteLine(playerOne + " wins this game.");
+                Console.WriteLine("Player One wins this game.");
                 playerOne.score++;
 
             }
@@ -48,7 +48,7 @@ namespace RockPapSciLizSpock
                 (playerOne.makesMove == gestures[3] && playerTwo.makesMove == gestures[0] || playerTwo.makesMove == gestures[2]) ||
                 (playerOne.makesMove == gestures[4] && playerTwo.makesMove == gestures[1] || playerTwo.makesMove == gestures[3]))
             {
-                Console.WriteLine(playerTwo + " wins this game.");
+                Console.WriteLine("Player Two wins this game.");
                 playerTwo.score++;
             }
             else

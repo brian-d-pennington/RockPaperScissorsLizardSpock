@@ -18,10 +18,32 @@ namespace RockPapSciLizSpock
 
         public override void PlayerMakesMove()
         {
+            Console.WriteLine("Computer chooses rock, paper, scissors, lizard, or spock..");
+            System.Threading.Thread.Sleep(3000); // to give it a more human-like response
+
             Random r = new Random();
-            // ... Get three random numbers.
-            //     Always 5, 6, 7, 8 or 9.
-            Console.WriteLine(r.Next(5, 10));
+            int x = r.Next(5, 10);
+            if (x == 5)
+            {
+                makesMove = "rock";
+            }
+            else if (x == 6)
+            {
+                makesMove = "paper";
+            }
+            else if (x == 7)
+            {
+                makesMove = "scissors";
+            }
+            else if (x == 8)
+            {
+                makesMove = "lizard";
+            }
+            else
+            {
+                makesMove = "spock";
+            }
+            Console.WriteLine("Computer chooses " + makesMove);
         }
 
         public void computerGeneratedPlayerName()
